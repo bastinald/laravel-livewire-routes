@@ -1,10 +1,10 @@
 <?php
 
-namespace Bastinald\Routes\Providers;
+namespace Bastinald\LaravelLivewireRoutes\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class RoutesProvider extends ServiceProvider
+class LaravelLivewireRoutesProvider extends ServiceProvider
 {
     public function boot()
     {

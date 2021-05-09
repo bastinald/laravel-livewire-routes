@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Bastinald\\Routes\\": "src"
+            "Bastinald\\LaravelLivewireRoutes\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bastinald\\Routes\\Providers\\RoutesProvider"
+                "Bastinald\\LaravelLivewireRoutes\\Providers\\LaravelLivewireRoutesProvider"
             ]
         }
     }
