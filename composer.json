@@ -1,7 +1,7 @@
 {
     "name": "bastinald/laravel-livewire-routes",
     "homepage": "https://github.com/bastinald/laravel-livewire-routes",
-    "description": "Automatic routing for your Livewire components.",
+    "description": "Laravel Livewire full page component routing.",
     "license": "MIT",
     "authors": [
         {

@@ -1,8 +1,15 @@
 # Laravel Livewire Routes
 
-Automatic routing for your Livewire components.
+Laravel Livewire full page component routing. This package allows you to specify routes directly inside your full page Livewire components via a `route` method. The `route` method uses the Laravel `Route` facade, giving you complete control.
+
+### Documentation
+
+- [Installation](#installation)
+- [Usage](#usage)
 
 ## Installation
+
+Require the package via composer:
 
 ```console
 composer require bastinald/laravel-livewire-routes
@@ -13,12 +20,51 @@ composer require bastinald/laravel-livewire-routes
 Declare a `route` method in your Livewire components:
 
 ```php
-public function route()
+use Illuminate\Support\Facades\Route;
+use Livewire\Component;
+
+class Login extends Component
 {
-    return Route::get('/hello-world', static::class)
-        ->name('hello-world')
-        ->middleware('guest');
+    public function route()
+    {
+        return Route::get('/login', static::class)
+            ->name('login')
+            ->middleware('guest');
+    }
+    
+    public function render()
+    {
+        return view('livewire.auth.login');
+    }
 }
 ```
 
-The `route` method should return a `Illuminate\Support\Facades\Route`.
+Passing route parameters to the component `mount` method:
+
+```php
+use App\Models\User;
+use Illuminate\Support\Facades\Route;
+use Livewire\Component;
+
+class Update extends Component
+{
+    public $user;
+
+    public function route()
+    {
+        return Route::get('/users/update/{user}', static::class)
+            ->name('users.update')
+            ->middleware('auth');
+    }
+    
+    public function mount(User $user)
+    {
+        $this->user = $user;
+    }
+    
+    public function render()
+    {
+        return view('livewire.users.update');
+    }
+}
+```
