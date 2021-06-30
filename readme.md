@@ -45,7 +45,7 @@ class Login extends Component
 }
 ```
 
-## Using Route Parameters
+### Using Route Parameters
 
 Pass route parameters to the component `mount` method as usual:
 
