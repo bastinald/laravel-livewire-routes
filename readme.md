@@ -1,11 +1,12 @@
 # Laravel Livewire Routes
 
-Laravel Livewire full page component routing. This package allows you to specify routes directly inside your full page Livewire components via a `route` method. The `route` method uses the Laravel `Route` facade, giving you complete control.
+This package allows you to specify routes directly inside your full page Livewire components via a `route` method. The `route` method returns the Laravel `Route` facade, giving you complete control.
 
 ### Documentation
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Route Parameters](#route-parameters)
 
 ## Installation
 
@@ -17,9 +18,11 @@ composer require bastinald/laravel-livewire-routes
 
 ## Usage
 
-Declare a `route` method in your Livewire components:
+Declare a `route` method in your full page Livewire components:
 
 ```php
+namespace App\Http\Livewire\Auth;
+
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
 
@@ -39,9 +42,13 @@ class Login extends Component
 }
 ```
 
+## Route Parameters
+
 Passing route parameters to the component `mount` method:
 
 ```php
+namespace App\Http\Livewire\Users;
+
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
