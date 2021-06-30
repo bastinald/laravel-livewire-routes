@@ -6,7 +6,8 @@ This package allows you to specify routes directly inside your full page Livewir
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Route Parameters](#route-parameters)
+    - [The Route Method](#the-route-method)
+    - [Using Route Parameters](#using-route-parameters)
 
 ## Installation
 
@@ -18,7 +19,9 @@ composer require bastinald/laravel-livewire-routes
 
 ## Usage
 
-Declare a `route` method in your full page Livewire components:
+### The Route Method
+
+Declare a `route` method in your full page Livewire components to route to them:
 
 ```php
 namespace App\Http\Livewire\Auth;
@@ -42,9 +45,9 @@ class Login extends Component
 }
 ```
 
-## Route Parameters
+## Using Route Parameters
 
-Passing route parameters to the component `mount` method:
+Pass route parameters to the component `mount` method as usual:
 
 ```php
 namespace App\Http\Livewire\Users;
