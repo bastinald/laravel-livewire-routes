@@ -17,7 +17,7 @@ Route::middleware('web')->group(function () {
         $component = $namespace . str_replace(
                 ['/', '.php'],
                 ['\\', ''],
-                Str::after($component->getRealPath(), realpath(app_path()) . DIRECTORY_SEPARATOR)
+                Str::after($component->getRealPath(), realpath(app_path()) . '/')
             );
 
         if (method_exists($component, 'route')) {
