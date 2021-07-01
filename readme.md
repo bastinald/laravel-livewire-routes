@@ -2,7 +2,7 @@
 
 This package allows you to specify routes directly inside your full page Livewire components via a `route` method. The `route` method returns the Laravel `Route` facade, giving you complete control.
 
-### Documentation
+## Documentation
 
 - [Installation](#installation)
 - [Usage](#usage)
