@@ -33,7 +33,7 @@ class Login extends Component
 {
     public function route()
     {
-        return Route::get('login', static::class)
+        return Route::get('login')
             ->name('login')
             ->middleware('guest');
     }
@@ -62,7 +62,7 @@ class Update extends Component
 
     public function route()
     {
-        return Route::get('users/update/{user}', static::class)
+        return Route::get('users/update/{user}')
             ->name('users.update')
             ->middleware('auth');
     }

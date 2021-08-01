@@ -21,7 +21,7 @@ Route::middleware('web')->group(function () {
             );
 
         if (method_exists($component, 'route')) {
-            app($component)->route();
+            app($component)->route()->uses($component);
         }
     }
 });
