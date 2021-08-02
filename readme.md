@@ -8,6 +8,7 @@ This package allows you to specify routes directly inside your full page Livewir
 - [Usage](#usage)
     - [The Route Method](#the-route-method)
     - [Using Route Parameters](#using-route-parameters)
+- [Publishing Config](#publishing-config)
 
 ## Installation
 
@@ -78,3 +79,13 @@ class Update extends Component
     }
 }
 ```
+
+## Publishing Config
+
+Customize the package configuration by publishing the config file:
+
+```console
+php artisan vendor:publish --tag=laravel-exception-emailer:config
+```
+
+Now you can easily change things like the extra component paths to use.
