@@ -45,6 +45,8 @@ class Login extends Component
 }
 ```
 
+As you can see, the `route` method returns the Laravel `Route` facade, so you can specify anything you normally would in a routes file via this method.
+
 ### Using Route Parameters
 
 Pass route parameters to the component `mount` method as usual:
@@ -78,3 +80,5 @@ class Update extends Component
     }
 }
 ```
+
+Yes, this even works with automatic model binding!
