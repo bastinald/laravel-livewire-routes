@@ -45,7 +45,7 @@ class Login extends Component
 }
 ```
 
-As you can see, the `route` method returns the Laravel `Route` facade, so you can specify anything you normally would in a routes file via this method.
+As you can see, the `route` method returns the Laravel `Route` facade, so you can specify anything you normally would in a routes file with this method.
 
 ### Using Route Parameters
 
